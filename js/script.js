@@ -1,27 +1,27 @@
 // Array extraño
 const strangeArray = [
-  "Zero",
+  "Zero", //esto
   function () {
     alert("Hola soy una función en un array");
   },
   22,
   null,
-  "Go lang",
+  "Go lang", //esto
   undefined,
-  "Cobol",
-  "I'm programmer",
+  "Cobol", //esto
+  "I'm programmer", //esto
   -2000,
-  "Hello world",
+  "Hello world", //esto
   `One is ${1}`,
-  { name: "Info", lastname: "last info" },
+  { name: "Info", lastname: "last info" }, //esto
   () => true,
   function showNumbers() {
     return "1, 2, 3, 4";
   },
-  "Another String",
+  "Another String", //esto
   ["Hola mundo!"],
-  "b is a letter",
-  "JavaScript",
+  "b is a letter", //esto
+  "JavaScript", //esto
 ];
 
 // Función que recibe por parámetro un array y muestra sus elementos en pantalla
@@ -37,6 +37,14 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+
+  
+  //función que filtra por el valor del tipo de elemento, que tiene que ser un string
+  const filtro = strangeArray.filter(element => typeof element === "string"); //se puede usar typeof para filtrar el array y que nos devuelva sólo los string 
+  filtro.forEach((element)=>showList(filtro));
+
+/*  function showList (filtro){
+    document.getElementBy
+*/
 });
