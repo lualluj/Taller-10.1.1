@@ -37,14 +37,10 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
-
-  
   //función que filtra por el valor del tipo de elemento, que tiene que ser un string
-  const filtro = strangeArray.filter(element => typeof element === "string"); //se puede usar typeof para filtrar el array y que nos devuelva sólo los string 
-  filtro.forEach((element)=>showList(filtro));
+    const filtro = strangeArray.filter(element => typeof element === "string"); //se puede usar typeof para filtrar el array y que nos devuelva sólo los string 
+    filtro.sort((a,b) => a.localeCompare(b)); // utilicé localeCompare para que ignore si la primera letra es mayúscula o minúscula
+    //llamo a la nueva array filtrada y le digo que para cada elemento haga lo que está delcarado en showList pero con los elementos de la nueva array
+    filtro.forEach((element)=>showList(filtro));
 
-/*  function showList (filtro){
-    document.getElementBy
-*/
 });
